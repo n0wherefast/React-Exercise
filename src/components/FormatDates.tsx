@@ -39,7 +39,7 @@ const options:OptionsDate[] = [
 
 export default function FormatDates() {
   return (
-    <div className='flex flex-col justify-center items-center w-80 h-80 border-2 p-2 m-2 border-slate-900 rounded'>
+<div className='flex flex-col justify-center items-center w-100 h-100 border-2 p-2 m-2 border-slate-900 rounded'>
             <h1 className=' text-xl font-bold text-red-500'>Format Dates</h1>
 
             <div className='flex flex-row '> 
