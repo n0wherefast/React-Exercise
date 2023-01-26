@@ -5,6 +5,7 @@ import FormatDates from './components/FormatDates';
 import EvenOdd from './components/EvenOdd';
 import ArraySum from './components/ArraySum';
 import DateSpread from './components/DateSpread';
+import CardGeneretor from './components/CardGeneretor';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <EvenOdd/>
         <ArraySum/>
         <DateSpread/>
+        <CardGeneretor/>
     </div>
  </div>
 
