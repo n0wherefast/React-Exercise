@@ -3,7 +3,7 @@ import React, { SetStateAction, useState } from 'react'
 export default function CardGeneretor() {
 
     
-    const [newCard,setNewCard] = useState<any> ({
+    const [newCard,setNewCard] = useState<Card> ({
         url:'',
         title:'',
         content:''
@@ -40,35 +40,35 @@ export default function CardGeneretor() {
         content:'Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.Lorem consectetur adipiscing elit.'
        },  
      ])
-//  const cards:Card[] = 
+
 
 
     
      const card = new Addcard(newCard.url,newCard.title,newCard.content) 
 
-     const handleChange = (input:any) => (e:any) => {
+     const handleChange = (input:string) => (e: React.ChangeEvent<HTMLInputElement>) => {
 
          setNewCard( {...newCard,[input] : e.target.value})
      }
 
-     const onSubmit = (e:any) =>{
+     const onSubmit = (e: React.FormEvent) =>{
         e.preventDefault()
         const add:SetStateAction<Card[]> =[...cards,card]
         setCards(add)
      }
 
-           console.log(cards)
+          
 
   return (
 
  <>
 
- <div className='flex flex-wrap flex-col w-1/2 m-10 border-2 border-slate-900 p-4 rounded '>
+ <div className='flex flex-wrap flex-col max-w-lg m-2 border-2 border-slate-900 p-4 rounded '>
         <h1 className='flex justify-center font-bold text-4xl m-1 pb-9  text-red-500'>Card Generetor</h1>
 
          <form className='border-2 border-slate-900 p-2 m-4 rounded  flex flex-col '>
             <h3 className='text-xl'> Image url</h3>
-            <input className='border-2 border-slate-900 m-2' name='url' type="text"onChange={handleChange('url')} />
+            <input className='border-2 border-slate-900 m-2 '  name='url' type="text"onChange={handleChange('url')} />
             <h3 className='text-xl'>Title</h3>
             <input className='border-2 border-slate-900 m-2' name='title' type="text" onChange={handleChange('title')} />
             <h3 className='text-xl'>Description</h3>

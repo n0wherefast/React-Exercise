@@ -26,7 +26,7 @@ const [result,setResult] = useState<number> ()
      
 
   return (
-    <div className='flex  flex-col border-2 border-slate-900 rounded m-2'>
+    <div className='flex  flex-col border-2 border-slate-900 rounded m-2 min-w-lg h-80 '>
         <h1 className='flex justify-center font-bold  text-xl m-1 text-red-500'>Date Spread</h1>
        <form className='flex' action="Date-Spread">
             <input className=' m-2 h-8 border border-slate-900 rounded' type="date" onChange={HandleDate1} />

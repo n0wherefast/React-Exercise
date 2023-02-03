@@ -27,7 +27,7 @@ export default function ArraySum() {
   
 
   return (
-    <div className='border-2 border-slate-900 m-2 rounded'>
+    <div className='border-2 border-slate-900 m-2 rounded h-80 w-90'>
       <h1 className='flex justify-center font-bold  text-xl m-1 text-red-500'>Array Sum</h1>
         <form className=' flex justify-center flex-col border-2 border-slate-900 rounded m-2 '>
           <div className='flex flex-row'>

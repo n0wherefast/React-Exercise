@@ -11,12 +11,12 @@ export default function EvenOdd() {
     <div className='flex  flex-row flex-wrap justify-center i'>
 
         { arr.map((item , index)  => {
-            const  _type = item % 2 == 0 ? 'Even' :'Odd';
+            const  _type = item % 2 === 0 ? 'Even' :'Odd';
             return (
                 <div className='flex flex-col justify-center border rounded font-medium border-slate-900 h-18 w-16 p-1 m-1'  key={index}>
-                    < p className=' '>{item}</p>
-                    < p className='  '>is</p>
-                    < p className=' '>{_type}</p>
+                    < p className=' flex justify-center '>{item}</p>
+                    < p className=' flex justify-center  '>is</p>
+                    < p className=' flex justify-center '>{_type}</p>
                 </div>
             )
             })}
