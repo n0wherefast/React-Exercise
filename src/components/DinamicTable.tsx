@@ -50,9 +50,7 @@ export default function DinamicTable() {
  const person = new Person(value.ID,value.Name,value.Surname,value.Email,value.Code,value.Address)
       
      const handleChange = (input:string) => (e:React.ChangeEvent<HTMLInputElement>) => {
-
         setValue( {...value,[input] : e.target.value})
-
     }
 
     const onSubmit = (e:React.FormEvent) =>{
@@ -72,7 +70,6 @@ export default function DinamicTable() {
                 <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Email'  name='Email' type="text"onChange={handleChange('Email')} />
                 <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Code' name='Code' type="text" onChange={handleChange('Code')} />
                 <input  className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Address' name='Address' onChange={handleChange('Address')} type="textarea" />
-
                 <button className='border border-slate-900  rounded  bg-emerald-600 hover:bg-emerald-800  w-1/2  m-2' type='submit' onClick={onSubmit}>Create</button>
     </form>  
     )

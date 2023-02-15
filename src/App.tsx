@@ -8,6 +8,8 @@ import DateSpread from './components/DateSpread';
 import CardGeneretor from './components/CardGeneretor';
 import DinamicTable from './components/DinamicTable';
 import CardsDeck from './components/CardsDeck';
+import Modal from './components/Modal';
+import Todo from './components/Todo';
 
 
 
@@ -25,8 +27,13 @@ function App() {
         <ArraySum/>
         <DateSpread/>
         <CardGeneretor/>
-          <DinamicTable/>    
-           <CardsDeck/>
+        <DinamicTable/>   
+        <div>
+          <Modal/>
+        </div> 
+        <CardsDeck/>
+        <Todo/>
+           
     </div>
  </div>
 
