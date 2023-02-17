@@ -10,6 +10,7 @@ import DinamicTable from './components/DinamicTable';
 import CardsDeck from './components/CardsDeck';
 import Modal from './components/Modal';
 import Todo from './components/Todo';
+import PasswordGenerator from './components/PasswordGenerator';
 
 
 
@@ -33,6 +34,7 @@ function App() {
         </div> 
         <CardsDeck/>
         <Todo/>
+        <PasswordGenerator/>
            
     </div>
  </div>

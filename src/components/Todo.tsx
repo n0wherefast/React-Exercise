@@ -59,7 +59,6 @@ export default function Todo() {
         if (saved ) {
           setChecked(JSON.parse(saved));
         }
-        console.log(saved)
       }, []);
 
           
@@ -87,7 +86,7 @@ export default function Todo() {
     const isCheck = (item:string) =>{
       return checked.includes(item)
     }
-  
+    
  return (
     <div className='m-w-1/1 min-h-80 h-1/2 border-2 border-black rounded  bg-slate-400 '>
          <h1 className=' text-3xl font-bold text-red-500 p-2 '>Todo List</h1>
@@ -101,12 +100,12 @@ export default function Todo() {
 
          </form>
             <ul>{unqTodo.map((item ,index)=>(
-                <button className={` ${isChecked(item)} p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center`}  key={index}  >
+                <li className={` ${isChecked(item)} p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center`}  key={index}  >
                     {item}
                     <Checkbox className='checked:line-through decoration-red-600 rounded-full flex items-center justify-center m-2 w-4 h-4'
                         onChange={handleCheck} value={item} checked={isCheck(item)}
                     />
-                </button>
+                </li>
             ))}
             </ul>
         </div>      
