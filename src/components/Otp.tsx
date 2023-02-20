@@ -5,7 +5,7 @@ export default function Otp(props:any) {
     const [value,setVal] = useState<string>()
     const [isCheck,setIscheck] = useState<Boolean>(false)
     const [modal,setModal] = useState<boolean>(false)
-    console.log(passToCheck)
+   
 
 const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value

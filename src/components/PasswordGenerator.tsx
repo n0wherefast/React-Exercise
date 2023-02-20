@@ -90,7 +90,6 @@ const carMaiusc =  (e:React.ChangeEvent<HTMLInputElement>) =>{
 
     const setOutput = () => {
         let output = password
-      
         return output
     }
 const copy = (text:string) =>{

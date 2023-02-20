@@ -1,0 +1,16 @@
+{
+
+"DATA_CARDS": [
+        {
+        "url": "https://img.freepik.com/premium-vector/skaters-comic-cover-graphic_215665-422.jpg?w=740",
+        "title": "Card 4 from Json file",
+        "content": "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.Lorem consectetur adipiscing elit."
+        },
+      
+      { 
+        "url": "https://img.freepik.com/free-psd/skateboard-mockup-psd-with-cool-design-sport-equipment_53876-115932.jpg?w=1060&t=st=1676894786~exp=1676895386~hmac=67dca69867dad1b34dea89ba72a908fae220ab1f7825ca44c03c37e5a7e83015",
+        "title": "Card 5 from json file",
+        "content": "Lorem ipsum dolor sit amet pretium consectetur adipiscing elit.Lorem consectetur adipiscing elit."
+      }
+     ]
+  }
