@@ -1,5 +1,6 @@
 import React, {useState } from 'react'
 import Otp from './Otp'
+import copyimg from '../copy.svg'
 
 export default function PasswordGenerator() {
     const [valLenght,setLeVal] = useState<number> ()
@@ -92,7 +93,10 @@ const carMaiusc =  (e:React.ChangeEvent<HTMLInputElement>) =>{
       
         return output
     }
-
+const copy = (text:string) =>{
+   navigator.clipboard?.writeText &&
+   navigator.clipboard.writeText(text);
+}
 
 
 
@@ -109,10 +113,14 @@ const carMaiusc =  (e:React.ChangeEvent<HTMLInputElement>) =>{
         <label htmlFor="" className='flex gap-4'>
         <input type="checkbox" onChange={carMaiusc} disabled={disabledButton}  />Maiuscolo
         </label>  
-        <button type='submit' className={`w-20 h-10 border-2 rounded border-black bg-emerald-500 hover:bg-emerald-700 ${cursor}`} onClick={generate} disabled={disabledButton } >Genera</button>      
+        <div className='flex gap-2 '>
+            <button type='submit' className={`w-20 h-10 border-2 rounded border-black bg-emerald-500 hover:bg-emerald-700 ${cursor}`} onClick={generate} disabled={disabledButton } >Genera</button>      
+            <button type='button' className={`max-w-10 max-h-10 border-2 p-2 rounded border-black bg-slate-500 hover:bg-slate-700 flex items-center`} onClick={()=>copy(setOutput())}><img src={copyimg} alt="" /> </button>      
+        </div>
+        
       </form>
       <div className='border-2 border-black m-w1/1 h-1/2 bg-white flex justify-center m-4 '>{setOutput()}</div>
-      <Otp/>
+      <Otp pass={setOutput()}/>
     </div>
   )
 }
