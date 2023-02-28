@@ -11,6 +11,7 @@ import CardsDeck from './components/CardsDeck';
 import Modal from './components/Modal';
 import Todo from './components/Todo';
 import PasswordGenerator from './components/PasswordGenerator';
+import Pokedex from './components/Pokedex';
 
 
 
@@ -35,6 +36,8 @@ function App() {
         <CardsDeck/>
         <Todo/>
         <PasswordGenerator/>
+        <Pokedex/>
+
            
     </div>
  </div>
