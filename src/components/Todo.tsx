@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Checkbox } from "@material-tailwind/react";
 
 export default function Todo() {
+
+
     const [todos, setTodo] = useState<string[]>([]);
     const [checked,setChecked] = useState<string[]>([])
 
@@ -20,6 +22,7 @@ export default function Todo() {
     const setTodos = (e:React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value)
     }
+
     const onSubmit = (e:React.FormEvent) => {
         e.preventDefault()
         setTodo( [...todos, value])
@@ -44,8 +47,7 @@ export default function Todo() {
           updatedList.splice(updatedList.indexOf(e.target.value), 1)
         }
         setChecked(updatedList);
-       
-    }
+     }
 
     useEffect(() => {
         const savedTodos = localStorage.getItem('todos');

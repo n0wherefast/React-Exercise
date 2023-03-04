@@ -1,23 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 
 export default function DragAndDrop() {
+    
+ interface Col {
+    title:string;
+    items:string[]
+ }
+
     const [value,setVal] = useState<string>('');
     let placeholder = 'Add Task'
-   const [drag,setDrag] = useState<any> (null)
-    const [columns, setColumns] = useState([
+    const [drag,setDrag] = useState<any> (null)
+    const [columns, setColumns] = useState( ()=>{
+        const storedTask = localStorage.getItem('tasks');
+        return storedTask ? JSON.parse(storedTask) :[
         { title: "In Coda", items: ['Rispondere alle Email','Allenare Gambe','Ricarica credito telefono','Prenotare Dentista'] },
         { title: "Aperto", items: ['Palestra'] },
         { title: "In Revisone", items: [] },
         { title: "Completo", items: ['React '] },
-      ]);
+      ]} 
+    );
 
 
-      let HandleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-           let val = e.target.value
-           setVal(val)
-      }
+    let HandleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+        let val = e.target.value
+        setVal(val)
+    }
 
       let HandleSubmit = (e:React.FormEvent ) =>{
         e.preventDefault();
@@ -30,17 +39,17 @@ export default function DragAndDrop() {
         setDrag({tsk,indCol})       
      }
      let handleDragEnd = (e:React.DragEvent<HTMLDivElement> ,tsk:string,indCol:number) =>{
-        console.log('DragEnd')
+        // console.log('DragEnd')
      }
      let Leave = (e:React.DragEvent<HTMLDivElement> ) =>{
         // console.log('Leave')
      }
      let Enter = (e:React.DragEvent<HTMLDivElement> ) =>{
-        console.log('Enter',e)
+        // console.log('Enter',e)
      }
      let Over = (e:React.DragEvent<HTMLDivElement> ) =>{
         e.preventDefault();
-        console.log('Over')
+        // console.log('Over')
      }
      let Drop = (e:React.DragEvent<HTMLDivElement> ,indCol:number) =>{
         // console.log('drop')
@@ -50,6 +59,16 @@ export default function DragAndDrop() {
         updatedColumns[indCol].items.push(drag.tsk);
         setColumns(updatedColumns)
      }
+     useEffect(()=>{
+        const saveCol = localStorage.getItem('tasks');
+        console.log(saveCol)
+        if(saveCol) {
+            setColumns(JSON.parse(saveCol))
+        }
+     },[])
+     useEffect(()=>{
+      localStorage.setItem('tasks',JSON.stringify(columns))
+     },[columns])
     
   return (
    <div className='flex flex-col justify-center items-center'>
@@ -59,11 +78,11 @@ export default function DragAndDrop() {
          </form>
 
      <div className="flex flex-row justify-center p-10 m-5 w-1/2 min-h-[700px] gap-6">  
-        {columns.map((cols,indCol) => {
+        {columns.map((cols:Col,indCol:number) => {
             return <div key={indCol} className="colonna rounded-xl bg-slate-200 p-10 w-80 min-h-80 flex flex-col gap-4 justify-start" data-column="0" onDragLeave={Leave} onDragEnter={Enter} onDragOver={(e)=> Over(e)} onDrop={(e)=>Drop(e,indCol)} >
                     <h2 className="text-xl text-center w-32 font-bold mb-4">{cols.title}</h2>
                         
-                        {cols.items.map((tsk,tskIndx) =>{
+                        {cols.items.map((tsk:string,tskIndx:number) =>{
                                 return <div key={tskIndx} className="task p-4 rounded-xl shadow-xl bg-white" draggable="true" data-task="0" onDragStart={(e)=> handleDragStart(e,tsk,indCol)} onDragEnd={(e)=> handleDragEnd(e,tsk,indCol)}>
                                             {tsk}
                                         </div>
