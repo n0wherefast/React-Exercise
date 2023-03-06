@@ -101,7 +101,10 @@ const HandleChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
 
   return (
     <div className='border-2 border-black w-1/1 h-1/2  m-2 bg-slate-400 flex flex-col'>
-    <h1 className=' text-3xl font-bold text-red-500 p-2 '>PokeDex</h1>
+      <div className='flex  items-center'> <h1 className=' text-6xl font-bold text-red-500 p-2 '>PokeDex</h1>
+      <img className='w-20 h-20 animate-slow ' src={pokeball} alt="" />
+      </div>
+   
     <h2 className=' border-2 rounded-xl border-black flex items-center p-2 ml-4 w-1/2 font-medium'>Enter "type:" if you want to search by type </h2>
     <input type="text" id="search-bar" className="pl-2 border-2 rounded-xl border-slate-500 w-1/1 h-10 m-4 font-bold "  onChange={HandleChange}/>
      <div id='pokedex'>

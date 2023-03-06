@@ -1,4 +1,4 @@
-<svg   viewBox="-20 -20 1300 1300" xmlns="http://www.w3.org/2000/svg">
+<svg   viewBox="-100 -100 400 400" xmlns="http://www.w3.org/2000/svg">
   <path d="M0,90 A50,50 0 1,1 197,105 L0,100" fill="red" stroke="black" stroke-width="5"/>
   <path d="M0,100 L197,105 A50,50 0 1,1 0,100" fill="white" stroke="black" stroke-width="5"/>
   <rect x="0" y="98" width="198" height="10" fill="black"/>

@@ -14,6 +14,7 @@ import Todo from './components/Todo';
 import PasswordGenerator from './components/PasswordGenerator';
 import Pokedex from './components/Pokedex';
 import DragAndDrop from './components/Drag&Drop';
+import DogApis from './components/DogApis';
 
 
 
@@ -23,7 +24,7 @@ function App() {
   <div className='bg-slate-600 justify-center items-center w-11/12 min-h-[900px]'>
     <div className='flex flex-row justify-center'>
       <h1 className=' flex justify-center items-center text-6xl font-bold p-2 m-2 text-sky-300'> React Exercise</h1>
-      <img className='w-32 h-32 justify-center items-center' src={logo}  alt="" />
+      <img className='w-32 h-32 justify-center items-center animate-slow' src={logo}  alt="" />
     </div>
     
     <div className='flex flex-row bg-slate-600 flex-wrap justify-center p-4'>
@@ -40,6 +41,7 @@ function App() {
           <span> <a className='border-2 border-black p-2 m-2 rounded-lg bg-slate-500 hover:bg-slate-400' href="/PasswordGen">PasswordGenerator</a></span>
           <span> <a className='border-2 border-black p-2 m-2 rounded-lg bg-slate-500 hover:bg-slate-400' href="/Pokedex">Pokedex</a></span>
           <span> <a className='border-2 border-black p-2 m-2 rounded-lg bg-slate-500 hover:bg-slate-400' href="/DragAndDrop">Drag&Drop</a></span>
+          <span> <a className='border-2 border-black p-2 m-2 rounded-lg bg-slate-500 hover:bg-slate-400' href="/DogApi">Dog API</a></span>
         </div>
        <BrowserRouter>
             <Routes>
@@ -55,6 +57,7 @@ function App() {
                 <Route path='/PasswordGen' element={<PasswordGenerator/>}/>   
                 <Route path='/Pokedex' element ={ <Pokedex/>} />
                 <Route path='/DragAndDrop' element={<DragAndDrop/>}/>
+                <Route path='/DogApi' element={<DogApis/>}/>
             </Routes>
         </BrowserRouter>
     </div>
