@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Checkbox } from "@material-tailwind/react";
+import {Button,Input }from '@material-tailwind/react';
 
 export default function Todo() {
 
@@ -83,28 +84,39 @@ export default function Todo() {
    
 
     let isChecked = (item:string) =>{ 
-        return  checked.includes(item) ? 'line-through decoration-red-600' : ' p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center'         
+        return  checked.includes(item) ? 'line-through decoration-red-600 text-slate-700' : ' p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center'         
     }
     const isCheck = (item:string) =>{
       return checked.includes(item)
     }
     
  return (
-    <div className='m-w-1/1 min-h-80 h-1/2 border-2 border-black rounded  bg-slate-400 '>
-         <h1 className=' text-3xl font-bold text-red-500 p-2 '>Todo List</h1>
+    <div className='m-w-1/1 min-h-80 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
+         <h1 className=' text-3xl font-bold text-pink-600 p-2 '>Todo List</h1>
          <div>
-         <form className='flex flex-col justify-center p-2 '>
-            <input className='flex justify-center  border-2 p-2' type="text" value={value} onSubmit={onSubmit} onChange={setTodos}  placeholder={'Todos'} />
+         <form className='flex flex-col justify-center p-2 gap-5 '>
+          <Input className='flex justify-center rounded-xl p-2 h-14 w-50 text-lg'  type="text" value={value} onSubmit={onSubmit} onChange={setTodos}  placeholder={'Todos'}  />
             <div className='flex gap-1 '>
-                  <button className='border  border-slate-900  rounded  bg-emerald-600 hover:bg-emerald-800  w-1/2  m-2' type='submit' onClick={onSubmit}>Create</button>
-                  <button className='border border-slate-900  rounded  bg-red-700 hover:bg-red-800 w-14  m-2' type='submit' onClick={clean}>Clean</button>
+              <Button
+             className={'border  border-cyan-600  rounded-xl  bg-cyan-600 hover:bg-cyan-800  w-1/2 p-2 m-2 text-xl font-semibold'}
+             type={'submit'}
+             onClick={onSubmit}
+              children={'Create'}  
+              />
+              <Button
+             className={'border border-pink-600  rounded-xl  bg-pink-700 hover:bg-pink-800 w-16 p-2 m-2 text-xl font-semibold'}
+             type={'submit'}
+             onClick={clean} 
+             children={'Clean'} 
+              />
+                 
             </div>
 
          </form>
             <ul>{unqTodo.map((item ,index)=>(
-                <li className={` ${isChecked(item)} p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center`}  key={index}  >
+                <li className={` ${isChecked(item)} p-1 pl-4  flex gap-1 font-semibold text-xl  items-center`}  key={index}  >
                     {item}
-                    <Checkbox className='checked:line-through decoration-red-600 rounded-full flex items-center justify-center m-2 w-4 h-4'
+                    <Checkbox className='checked:line-through decoration-red-600  flex items-center justify-center m-2 w-4 h-4'
                         onChange={handleCheck} value={item} checked={isCheck(item)}
                     />
                 </li>

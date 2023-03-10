@@ -1,0 +1,32 @@
+{
+    "DATA_FORM": [
+            {
+            "name": "name",
+            "type": "text",
+            "id": 0,
+            "placeholder": "Name",
+            "Change": "name"
+           },
+           {
+            "name": "email",
+            "type": "email",
+            "id": 1,
+            "placeholder": "Email",
+            "Change": "email"
+           },
+           {
+            "name": "password",
+            "type": "password",
+            "placeholder": "Password",
+            "id": 2,
+            "Change": "Password"
+           },
+           {
+            "name": "passwordRepeat",
+            "type": "password",
+            "placeholder": "Password Repeat",
+            "id": 3,
+            "Change": "PasswordRepeat"
+           }
+         ]
+}

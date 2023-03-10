@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import AutoComplete from './AutoComplete'
+import { Button } from './utils/ComponentsUtils'
+
+
 export default function Modal() {
     const [modal,setModal] = useState (false)
     const create = () => {
@@ -10,13 +13,13 @@ export default function Modal() {
     }
     const openModal = (modal === false) ? 'hidden' : null
   return (
-    <div className='flex  flex-col items-center justify-center gap-1 p-2 m-2 max-w-lg  border-2 border-black rounded'>
-                <h1 className=' text-3xl font-bold text-red-500 p-2 '>Modal + Auto Complete</h1>
+    <div className='flex  flex-col items-center justify-center gap-1  w-1/1'>
+                <h1 className=' text-3xl font-bold text-pink-600 p-4 '>Modal + Auto Complete</h1>
 
-        <button className='border border-slate-900 p-1 rounded  bg-emerald-600 hover:bg-emerald-800  max-w-1/2  m-2' type='submit' onClick={create}>Search Bar</button>
-        <div className ={`flex border-2 border-black  ${openModal}`}>
+        <Button className=' p-2 rounded-xl border-2  bg-cyan-600 hover:bg-pink-700 hover:border-2 border-cyan-600 max-w-1/2 m-2 font-semibold' type='submit' onClick={create} name={'Search Bar'}/>
+        <div className ={`flex justify-center bg-slate-800 w-[290px] rounded-xl ${openModal}`}>
              <AutoComplete/>
-             <button className='border border-slate-900 p-4  rounded  bg-red-700 hover:bg-red-800  max-h-6 flex items-center m-2' type='submit' onClick={canc}>X</button>
+             <Button className='border border-slate-900 p-3  rounded  bg-pink-700 hover:bg-pink-800  max-h-6 flex items-center m-3 mr-5' type='submit' onClick={canc} name={'X'}/>
         </div>
     </div>
   )

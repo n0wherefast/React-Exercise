@@ -1,5 +1,7 @@
 import React, { SetStateAction, useEffect, useState } from 'react'
 import CARDS from '../cards.json'
+import { Button,Input } from './utils/ComponentsUtils'
+
 
 export default function CardGeneretor() {
 
@@ -20,7 +22,6 @@ export default function CardGeneretor() {
     }
     class Addcard {
         constructor(public url:string,  public title:string,public content:string){
-
         }
     }
     
@@ -94,42 +95,42 @@ export default function CardGeneretor() {
 
  <>
 
- <div className='flex flex-wrap flex-col max-w-lg m-2 border-2 border-slate-900 p-4 rounded '>
-        <h1 className='flex justify-center font-bold text-4xl m-1 pb-9  text-red-500'>Card Generetor</h1>
+ <div className='flex flex-wrap flex-col max-w-lg m-2 p-4 rounded '>
+        <h1 className='flex justify-center font-bold text-4xl m-1 pb-9  text-pink-500'>Card Generetor</h1>
 
-         <form className='border-2 border-slate-900 p-2 m-4 rounded  flex flex-col '>
-            <h3 className='text-xl'> Image url</h3>
-            <input className='border-2 border-slate-900 m-2 '  name='url' type="text"onChange={handleChange('url')} />
-            <h3 className='text-xl'>Title</h3>
-            <input className='border-2 border-slate-900 m-2' name='title' type="text" onChange={handleChange('title')} />
-            <h3 className='text-xl'>Description</h3>
-            <input  className='border-2 border-slate-900 m-2 ' name='content' onChange={handleChange('content')} type="textarea" />
+         <form className=' bg-slate-800 p-2 m-4 rounded-xl flex flex-col '>
+            <h3 className='text-xl text-slate-200'> Image url</h3>
+            <Input className='border-2 border-slate-900 m-2 '  name='url' type="text"onChange={handleChange('url')} />
+            <h3 className='text-xl text-slate-200'>Title</h3>
+            <Input className='border-2 border-slate-900 m-2' name='title' type="text" onChange={handleChange('title')} />
+            <h3 className='text-xl text-slate-200'>Description</h3>
+            <Input  className='border-2 border-slate-900 m-2 ' name='content' onChange={handleChange('content')} type="textarea" />
             <div className='flex gap-2'>
-                <button className='border border-slate-900  rounded  bg-emerald-600 hover:bg-emerald-800  w-20 ml-2' type='submit' onClick={onSubmit}>Create</button>
-                <button className='border border-slate-900  rounded  bg-emerald-600 hover:bg-emerald-800  w-20 ml-2' type='button' onClick={loadCard}>Load</button>
+                <Button className='flex items-center p-2 rounded-xl border-2  bg-cyan-600 hover:bg-pink-700 hover:border-2 border-cyan-600 max-w-1/2 m-2 h-10 font-semibold text-lg' type='submit' onClick={onSubmit} name={'Create'}/>
+                <Button className='flex items-center p-2 rounded-xl border-2  bg-cyan-600 hover:bg-pink-700 hover:border-2 border-cyan-600 max-w-1/2 m-2 h-10 font-semibold text-lg' type='button' onClick={loadCard} name={'Load'}/> 
             </div>
             
          </form>
 
-         <form className='border-2 border-slate-900 p-2 m-4 rounded  flex flex-col '>
+         <form className='bg-slate-800 rounded-xl p-2 m-4  flex flex-col '>
             <div className='flex gap-2 justify-center items-center'>
-            <h3 className='text-xl'> Padding</h3>
-            <input className='border-2 border-slate-900 m-2 w-1/12'  name='padding' type="number" onChange={handlePadding} />
-            <h3 className='text-xl'>Margin</h3>
-            <input className='border-2 border-slate-900 m-2 w-1/12' name='margin' type="number" onChange={handleMargin} />
+            <h3 className='text-xl  text-slate-200'> Padding</h3>
+            <Input className='border-2 border-slate-900 m-2  w-[40px]'  name='padding' type="number" onChange={handlePadding} />
+            <h3 className='text-xl  text-slate-200'>Margin</h3>
+            <Input className='border-2 border-slate-900 m-2 w-[40px]' name='margin' type="number" onChange={handleMargin} />
            </div>
             <div className='flex gap-2 justify-center items-center'>
-              <h3 className='text-xl'>Colore Text</h3>
-            <input  className='border-2 border-slate-900 m-2 ' name='color' type="color" onChange={handleColor} />
-            <h3 className='text-xl'>Colore Title</h3>
-            <input  className='border-2 border-slate-900 m-2 ' name='color' type="color" onChange={handleTitColor} />  
+              <h3 className='text-xl  text-slate-200'>Colore Text</h3>
+            <Input  className='border-2 border-slate-900 m-2 ' name='color' type="color" onChange={handleColor} />
+            <h3 className='text-xl  text-slate-200'>Colore Title</h3>
+            <Input  className='border-2 border-slate-900 m-2 ' name='color' type="color" onChange={handleTitColor} />  
             </div>
             
          </form>
 
         <div className='flex flex-wrap'>
             {cards.map((item:Card ,index:number) => ( 
-                <div key={index} className='w-full md:w-1/2 xl:w-1/3 px-4'>
+                <div key={index} className='w-full md:w-1/2 xl:w-1/2 px-4'>
                 <div className={`bg-white rounded-lg overflow-hidden mb-10`} style={{padding:`${padding}`,margin:`${margin}`}}>
                     <img src={item.url}
                     alt='img'

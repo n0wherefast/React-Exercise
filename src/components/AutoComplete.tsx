@@ -1,4 +1,6 @@
 import React, {useState } from 'react'
+import {Input } from './utils/ComponentsUtils'
+
 
 export default function AutoComplete() {
     let placeholder = 'Chi Cerchi?';
@@ -13,7 +15,8 @@ export default function AutoComplete() {
     "chiara",
     "clara",
     "dino",
-    "dinosauro"] ;
+    "dinosauro",
+    "elisa"] ;
     const [value,setVal] = useState<string>('');
     const isEmpty = (value === '') ? 'hidden' : '';
 
@@ -35,10 +38,10 @@ export default function AutoComplete() {
 
 
   return (
-    <div className='flex  flex-col justify-center p-2 m-2 border-2 border-black rounded max-w-lg h-1/1 '>
-        <h1 className=' text-2xl font-bold text-red-500 p-2 '>Auto Complete</h1>
+    <div className='flex  flex-col justify-center p-2 ml-2 rounded max-w-lg h-1/1 '>
+        <h1 className=' text-2xl font-bold text-cyan-500 p-2 '>Auto Complete</h1>
          <section className='flex flex-col justify-center   p-2 '>
-            <input className='flex justify-center  border-2 p-2' type="text" value={value} onChange={autoComplete}  placeholder={placeholder} />
+            <Input className='flex justify-center  border-2 p-2' type="text" value={value} onChange={autoComplete}  placeholder={placeholder} />
             <div className={`bg-white ${isEmpty}`}><ul>{risultati}</ul></div>
          </section>
           

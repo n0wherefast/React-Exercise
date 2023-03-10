@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Button,Input } from './utils/ComponentsUtils'
+
 
 
 export default function DinamicTable() {
@@ -62,30 +64,30 @@ export default function DinamicTable() {
    const form = () => {
     return(
         
-    <form className='border-2 border-slate-900 p-2 m-4 rounded  flex flex-row '>
+    <form className='md:border-2 md:border-slate-800 p-2 m-4 rounded-xl flex-wrap items-center justify-center md:flex-nowrap flex flex-row '>
                 
-                <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='ID' name='ID' type="text"onChange={handleChange('ID')} />
-                <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Name' name='Name' type="text" onChange={handleChange('Name')} />
-                <input  className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Surname' name='Surname' onChange={handleChange('Surname')} type="textarea" />
-                <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Email'  name='Email' type="text"onChange={handleChange('Email')} />
-                <input className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Code' name='Code' type="text" onChange={handleChange('Code')} />
-                <input  className='border-2 w-1/2 border-slate-900 m-2 p-2' placeholder='Address' name='Address' onChange={handleChange('Address')} type="textarea" />
-                <button className='border border-slate-900  rounded  bg-emerald-600 hover:bg-emerald-800  w-1/2  m-2' type='submit' onClick={onSubmit}>Create</button>
+                <Input className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='ID' name='ID' type="text"onChange={handleChange('ID')} />
+                <Input className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='Name' name='Name' type="text" onChange={handleChange('Name')} />
+                <Input  className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='Surname' name='Surname' onChange={handleChange('Surname')} type="textarea" />
+                <Input className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='Email'  name='Email' type="text"onChange={handleChange('Email')} />
+                <Input className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='Code' name='Code' type="text" onChange={handleChange('Code')} />
+                <Input  className=' w-1/2  m-2 p-2 rounded-xl ' placeholder='Address' name='Address' onChange={handleChange('Address')} type="textarea" />
+                <Button className='border border-cyan-600  rounded-xl  bg-cyan-600 hover:bg-pink-600  w-1/2 h-10  m-2' type='submit' onClick={onSubmit} name={'Create'}/>
     </form>  
     )
    }
 
 
   return (
-<div className='border-2 border-slate-900 max-w-3xl h-96 m-2 rounded flex flex-col items-center p-2 '>
-    <h1 className=' text-4xl font-bold text-red-500 p-2 '>Dinamic Table</h1>
+<div className=' m-2 rounded flex flex-col items-center p-2 overflow-scroll'>
+    <h1 className=' text-4xl font-bold text-pink-600 p-2 '>Dinamic Table</h1>
 
     {form()}
 
     <table className='' >
             
             <thead >
-                <tr className='bg-emerald-600 '>
+                <tr className='bg-cyan-800 flex-wrap'>
                     
                     <th className='border-2  border-slate-900'>Id</th>
                     <th className='border-2  border-slate-900'>Nome</th>
@@ -102,7 +104,7 @@ export default function DinamicTable() {
                     <tr  key={index}>
                         
                             {Object.keys(element).map((key:string,index:number) => (
-                            <td key={index} className='border  border-slate-900 bg-sky-400 w-28 p-4'>{element[key]}</td> 
+                            <td key={index} className='border-2  border-slate-900 font-semibold  w-28 '>{element[key]}</td> 
                             ))}
                         
                     </tr>

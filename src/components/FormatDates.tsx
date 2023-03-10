@@ -39,25 +39,25 @@ const options:OptionsDate[] = [
 
 export default function FormatDates() {
   return (
-<div className='flex flex-col justify-center items-center w-100 h-100 border-2 p-2 m-2 border-slate-900 rounded'>
-            <h1 className=' text-xl font-bold text-red-500'>Format Dates</h1>
+<div className='flex flex-col justify-center items-center w-100 h-100  p-2 m-2'>
+            <h1 className='text-3xl font-bold text-pink-600'>Format Dates</h1>
 
             <div className='flex flex-row '> 
              
-                    <div className=' flex flex-col border-2 rounded border-slate-900 m-2 '> 
-                            <h1 className='border-2 border-slate-600 m-2 flex justify-center font-medium rounded'> UTC</h1>
-                                {options.map((item:any,index:number) =>(
+                    <div className=' flex flex-col rounded-xl bg-slate-800 m-2 '> 
+                            <h1 className='border-2 border-slate-200 m-2 flex justify-center text-slate-200 font-medium rounded-xl'> UTC</h1>
+                                {options.map((item:OptionsDate,index:number) =>(
                                     <div className=' m-2 p-2 ' key={index}>
-                                    <h2 className='  font-semibold'>{today.toLocaleString(undefined,item)}</h2>
+                                    <p className='text-slate-200 font-semibold'>{today.toLocaleString(undefined,item)}</p>
                                     </div>
                         ))}         
                     </div>
 
-                    <div className=' flex flex-col m-2 border-2 rounded border-slate-900'> 
-                            <h1 className='border border-slate-900 m-2 flex justify-center font-medium rounded'>en-US </h1>
-                                {options.map((item:any,index:number) =>(
+                    <div className=' flex flex-col rounded-xl bg-slate-800 m-2 '> 
+                            <h1 className='border-2 border-slate-200 m-2 flex justify-center text-slate-200 font-medium rounded-xl'>en-US </h1>
+                                {options.map((item:OptionsDate,index:number) =>(
                                     <div className=' m-2 p-2 ' key={index}>
-                                    <h2 className=' font-semibold'>{today.toLocaleString('en-US',item)}</h2>
+                                    <p className='text-slate-200 font-semibold '>{today.toLocaleString('en-US',item)}</p>
                                     </div>
                         ))}         
                     </div>

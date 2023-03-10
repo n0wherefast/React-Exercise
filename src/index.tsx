@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-<div className='flex  justify-center bg-sky-300  '>
+<div className='flex justify-center items-center overflow-hidden bg-slate-900 scroll-smooth'>
   <React.StrictMode>
     <App />
   </React.StrictMode>

@@ -1,6 +1,8 @@
 import { type } from '@testing-library/user-event/dist/type';
 import React, { useState } from 'react'
 import logo from '../logo.svg';
+import { Button } from './utils/ComponentsUtils'
+
 
 export default function CardsDeck() {
 
@@ -8,7 +10,7 @@ export default function CardsDeck() {
   
     const [cards,setCard] = useState( [1,2,3,4,5,6,7,8,9,10,'Re','Donna','Fante'])
     const [hand,setHand] = useState<(string | number)[]>([])
-    const [show,setShow] = useState<boolean>(false)
+    const [show,setShow] = useState<Boolean>(false)
     let disabledDraw = false
     let cursorDraw = ''
     let disabledPutUn = false
@@ -69,31 +71,33 @@ export default function CardsDeck() {
   
 
   return (
-<div className=' border-2  border-black rounded m-2 p-4 flex flex-row flex-wrap justify-center max-w-lg'>
-                <h1 className=' text-4xl font-bold text-red-500 w-96 flex justify-center m-4'>Cards Deck</h1>
-                
-                        {cards.map((item,index) => {
+<div className=' m-2 p-4 flex flex-col flex-wrap items-center max-w-lg'>
+    
+                <h1 className=' text-5xl font-bold text-pink-600 w-96 flex justify-center  m-5'>Cards Deck</h1>
+                <div className='flex justify-center flex-wrap'>
+                     {cards.map((item,index) => {
                          let isShow:any = (show === false) ? <img className='w-32 h-32 justify-center items-center' src={logo} alt='' /> : item;   
-                    return <div key={index}
-                        className = 'w-32 h-40 m-2  border-2 border-slate-900 rounded bg-slate-500 flex justify-center items-center font-bold text-4xl'
-                        onClick={()=>draw(cards)} >
-                            {isShow}
-                    </div>
-})}
-               
+                            return <div key={index}
+                                className = 'w-32 h-40 m-2 rounded-xl bg-slate-800 flex justify-center items-center text-slate-200 font-bold text-4xl'
+                                onClick={()=>draw(cards)} >
+                                  {isShow}
+                                 </div>
+                         })}
+               </div>
+                       
             
-            <div className='border-2 border-black rounded p-2 flex flex-wrap gap-2 justify-between'>
-                <button className=' border border-black rounded  bg-sky-500 hover:bg-emerald-600  w-32 h-10 'onClick={()=> shuffle(cards)}> Shuffle</button>
-                 <button className={` border border-black rounded  bg-sky-500 hover:bg-emerald-600  w-32 h-10 ${cursorDraw}`} disabled={disabledDraw}  onClick={()=> draw(cards)}> Draw</button>
-                <button className={`  border border-black rounded  bg-sky-500 hover:bg-emerald-600  w-32 h-10 ${cursorPutUn} `}  disabled={disabledPutUn} onClick={()=> putUnder(cards)}> Put Under</button>
-                <button className={`  border border-black rounded  bg-sky-500 hover:bg-emerald-600  w-32 h-10 `}  onClick={showCards}>ShowCard</button>
-                <button className={`  border border-black rounded  bg-sky-500 hover:bg-emerald-600  w-32 h-10 `}  onClick={hideCards}>HideCard</button>
+            <div className='bg-slate-800 rounded-xl p-4 flex flex-col items-center w-1/2  md:flex-wrap gap-2'>
+                <Button className=' border-2 border-cyan-500 rounded-xl bg-cyan-500 hover:bg-pink-600 transition text-xl font-semibold w-32 h-10 'onClick={()=> shuffle(cards)} name={'Shuffle'}/>
+                <Button className={`border-2 border-cyan-500 rounded-xl bg-cyan-500 hover:bg-pink-600 transition text-xl font-semibold w-32 h-10 ${cursorDraw}`} disabled={disabledDraw}  onClick={()=> draw(cards)} name={'Draw'} />
+                <Button className={`border-2 border-cyan-500 rounded-xl bg-cyan-500 hover:bg-pink-600 transition text-xl font-semibold w-32 h-10 ${cursorPutUn} `}  disabled={disabledPutUn} onClick={()=> putUnder(cards)} name={'Put Under'}/>
+                <Button className={`border-2 border-cyan-500 rounded-xl bg-cyan-500 hover:bg-pink-600 transition text-xl font-semibold w-32 h-10 `}  onClick={showCards}name={'ShowCard'}/>
+                <Button className={`border-2 border-cyan-500 rounded-xl bg-cyan-500 hover:bg-pink-600 transition text-xl font-semibold w-32 h-10 `}  onClick={hideCards} name={'HideCard'}/>
             </div>
-            <div  className='border-2 border-black rounded p-2  flex flex-col m-2 items-center bg-slate-500 justify-center'>
-                <h2> La tua mano</h2>
-                <div  className='border-2 border-black rounded p-2  flex justify-center m-2'>
+            <div  className='bg-slate-800 rounded-xl p-2  flex flex-col w-[260px] m-2 items-center justify-center'>
+                <p className='text-slate-200 text-xl font-semibold'> La tua mano</p>
+                <div  className='border-2 border-slate-200 rounded-xl p-2  flex justify-center m-2'>
                     {hand.map((item,index)=>(
-                    <div key={index} className='w-14 h-20 p-2 m-2 border-2 border-black flex justify-center items-center font-semibold text-md'>{item}</div>
+                    <div key={index} className='w-16 h-24 p-1 m-1 rounded-xl bg-slate-200 flex justify-center items-center font-semibold text-slate-800 text-xl'>{item}</div>
                 ))}
             </div>
             

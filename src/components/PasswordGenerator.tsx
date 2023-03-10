@@ -1,6 +1,8 @@
 import React, {useState } from 'react'
 import Otp from './Otp'
 import copyimg from '../copy.svg'
+import {Button }from '@material-tailwind/react';
+
 
 export default function PasswordGenerator() {
     const [valLenght,setLeVal] = useState<number> ()
@@ -88,8 +90,8 @@ const carMaiusc =  (e:React.ChangeEvent<HTMLInputElement>) =>{
     }
 
 
-    const setOutput = () => {
-        let output = password
+    const setOutput = ():string => {
+        let output:string = password
         return output
     }
 const copy = (text:string) =>{
@@ -100,11 +102,11 @@ const copy = (text:string) =>{
 
 
   return (
-    <div className='border-2 border-black m-w-1/1 min-h-80 h-1/2  m-4 bg-slate-400'>
-      <h1 className=' text-3xl font-bold text-red-500 p-2 '>Password Generator</h1>
-      <form action="" className='flex gap-4 m-2 flex-col'>
-        <label htmlFor="" className='flex gap-4'>
-        <input type="number" className='w-10 pl-2 ' min={4} onChange={LenghtVal}  />Lunghezza
+    <div className=' m-w-1/1 min-h-80 h-1/2  m-4 md:border-2 md:border-slate-800 rounded-xl'>
+      <h1 className=' text-3xl font-bold text-pink-600 p-2 '>Password Generator</h1>
+      <form action="" className='flex gap-4 m-2 flex-col text-xl font-semibold'>
+        <label htmlFor="" className='flex flex-row j gap-4'>
+        <input type="number" className='w-10 ' min={4} onChange={LenghtVal}  />Lunghezza
         </label>        
         <label htmlFor="" className='flex gap-4'>
         <input type="checkbox" onChange={carSpec} disabled={disabledButton}  />Caratteri Speciali
@@ -113,13 +115,13 @@ const copy = (text:string) =>{
         <input type="checkbox" onChange={carMaiusc} disabled={disabledButton}  />Maiuscolo
         </label>  
         <div className='flex gap-2 '>
-            <button type='submit' className={`w-20 h-10 border-2 rounded border-black bg-emerald-500 hover:bg-emerald-700 ${cursor}`} onClick={generate} disabled={disabledButton } >Genera</button>      
-            <button type='button' className={`max-w-10 max-h-10 border-2 p-2 rounded border-black bg-slate-500 hover:bg-slate-700 flex items-center`} onClick={()=>copy(setOutput())}><img src={copyimg} alt="" /> </button>      
+            <Button type='submit' className={`w-20 h-10 border-2 rounded-xl border-cyan-600 bg-cyan-600 hover:bg-pink-600 ${cursor}`} onClick={generate} disabled={disabledButton } children={'Genera'} />      
+            <button type='button' className={`max-w-10 max-h-10 border-2 p-2 rounded-xl border-pink-600 bg-pink-600 hover:bg-cyan-600 flex items-center`} onClick={()=>copy(setOutput())}><img src={copyimg} alt="" /> </button>      
         </div>
         
       </form>
-      <div className='border-2 border-black m-w1/1 h-1/2 bg-white flex justify-center m-4 '>{setOutput()}</div>
-      <Otp pass={setOutput()}/>
+      <div className='rounded-xl m-w1/1 h-1/2 bg-slate-200 flex justify-center m-4 font-semibold '>{setOutput()}</div>
+      <Otp pass = {setOutput()}/>
     </div>
   )
 }
