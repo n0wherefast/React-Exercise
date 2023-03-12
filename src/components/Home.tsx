@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-<div>
+<div  className='p-2'>
     <h2 className='p-2 font-black text-xl'>Descrizione del progetto</h2>
       <p className='p-2 '>
         Questa React App definisce un insieme di esercizi su diversi componenti. 
