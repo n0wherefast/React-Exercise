@@ -71,16 +71,16 @@ export default function DragAndDrop() {
    <div className='flex flex-col justify-center items-center'>
          <form className='flex flex-row justify-center items-center max-w-xl p-2 '>
             <input className='flex justify-center bg-slate-200 rounded-xl  h-14  border-2 p-2' type="text" value={value} onChange={HandleChange}  placeholder={placeholder} />
-            <button className='rounded-xl  bg-cyan-600 hover:bg-emerald-800 w-[60px] h-[60px] m-2 text-lg font-semibold' type='submit' onClick={HandleSubmit}>Create</button>
+            <button className='rounded-xl  bg-cyan-600 hover:bg-emerald-800 w-[55px] h-[55px] m-2 text-lg font-semibold' type='submit' onClick={HandleSubmit}>Create</button>
          </form>
 
      <div className="flex flex-wrap flex-row md:flex-nowrap justify-center p-10 m-5 w-1/2 min-h-[700px] gap-6">  
         {columns.map((cols:Col,indCol:number) => {
-            return <div key={indCol} className="colonna rounded-xl bg-slate-200 p-10 w-1/2h md:w-44   lg:w-80 lg:min-h-80 flex flex-col gap-4 justify-start" data-column="0" onDragLeave={Leave} onDragEnter={Enter} onDragOver={(e)=> Over(e)} onDrop={(e)=>Drop(e,indCol)} >
+            return <div key={indCol} className="colonna rounded-xl bg-slate-200 p-10 w-1/1 h md:w-40   lg:w-80 lg:min-h-80 flex flex-col gap-4 justify-start" data-column="0" onDragLeave={Leave} onDragEnter={Enter} onDragOver={(e)=> Over(e)} onDrop={(e)=>Drop(e,indCol)} >
                     <h2 className="flex items-center text-xl text-center w-32 font-bold mb-4">{cols.title}</h2>
                         
                         {cols.items.map((tsk:string,tskIndx:number) =>{
-                                return <div key={tskIndx} className="task p-3 rounded-xl shadow-xl bg-slate-100" draggable="true" data-task="0" onDragStart={(e)=> handleDragStart(e,tsk,indCol)} onDragEnd={(e)=> handleDragEnd(e,tsk,indCol)}>
+                                return <div key={tskIndx} className=" p-5 w-24 flex items-center justify-center rounded-xl shadow-xl bg-slate-100" draggable="true"  onDragStart={(e)=> handleDragStart(e,tsk,indCol)} onDragEnd={(e)=> handleDragEnd(e,tsk,indCol)}>
                                             {tsk}
                                         </div>
                         })} 

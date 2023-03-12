@@ -84,14 +84,14 @@ export default function Todo() {
    
 
     let isChecked = (item:string) =>{ 
-        return  checked.includes(item) ? 'line-through decoration-red-600 text-slate-700' : ' p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center'         
+        return  checked.includes(item) ? 'line-through decoration-red-600 text-slate-800' : ' p-1 pl-4  flex gap-1 font-semibold text-lg text-black items-center'         
     }
     const isCheck = (item:string) =>{
       return checked.includes(item)
     }
     
  return (
-    <div className='m-w-1/1 min-h-80 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
+    <div className='m-w-1/1 min-h-80 m-2 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
          <h1 className=' text-3xl font-bold text-pink-600 p-2 '>Todo List</h1>
          <div>
          <form className='flex flex-col justify-center p-2 gap-5 '>
@@ -114,7 +114,7 @@ export default function Todo() {
 
          </form>
             <ul>{unqTodo.map((item ,index)=>(
-                <li className={` ${isChecked(item)} p-1 pl-4  flex gap-1 font-semibold text-xl  items-center`}  key={index}  >
+                <li className={` ${isChecked(item)} pl-4 w-40 h-14  flex gap-2 font-semibold text-xl bg-cyan-900 m-2 rounded-3xl items-center`}  key={index}  >
                     {item}
                     <Checkbox className='checked:line-through decoration-red-600  flex items-center justify-center m-2 w-4 h-4'
                         onChange={handleCheck} value={item} checked={isCheck(item)}

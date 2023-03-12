@@ -27,6 +27,7 @@ export default function Home() {
       <li> <p className='font-bold text-lg'>Pokedex:</p> un componente che mostra informazioni sui Pokemon</li>
       <li> <p className='font-bold text-lg'>Drag And Drop:</p> un componente che implementa la funzionalità di trascinamento e rilascio</li>
       <li> <p className='font-bold text-lg'>DogApis:</p> un componente che mostra immagini di cani da un'API</li>
+      <li> <p className='font-bold text-lg'>Sign Up Form:</p> un componente che mostra un form di registrazione unsando useReducer</li>
       <li> <p className='font-bold text-lg'>Home:</p> un componente che mostra la pagina iniziale</li>
     </ul>
     <p className='pt-2 font-extrabold text-xl'>Cosa Ho Utilizzato:</p>
@@ -36,6 +37,8 @@ export default function Home() {
       <li><p className='font-bold text-lg underline hover:text-slate-700'><a href="https://reactrouter.com/en/main">React Router:</a></p></li>
       <li><p className='font-bold text-lg underline hover:text-slate-700'><a href="https://tailwindcss.com/">Tailwind:</a></p></li>
     </ul>
+
+    
   
 </div>
   )

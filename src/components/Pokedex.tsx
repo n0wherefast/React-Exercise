@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import pokemons from '../pokemon.json-master/pokedex.json'
 import pokeball from '../pokeball.svg'
-import {Button,Input }from '@material-tailwind/react';
+
 
 let value = ''
 let pokemon1Gen = pokemons.slice(0,151)

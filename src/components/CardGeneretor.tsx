@@ -1,4 +1,4 @@
-import React, { SetStateAction, useEffect, useState } from 'react'
+import React, { SetStateAction,  useState } from 'react'
 import CARDS from '../cards.json'
 import { Button,Input } from './utils/ComponentsUtils'
 

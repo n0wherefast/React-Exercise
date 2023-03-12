@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
 <div className='flex justify-center items-center overflow-hidden bg-slate-900 scroll-smooth'>
+<HashRouter>
   <React.StrictMode>
     <App />
   </React.StrictMode>
+</HashRouter>
+ 
   </div>
 );
 

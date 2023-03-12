@@ -60,7 +60,7 @@ console.log(state)
     }
 
   return (
-    <form className='flex flex-col items-center bg-slate-800 rounded-xl p-6'>
+    <form className='flex flex-col items-center bg-slate-800 rounded-xl m-2 p-6'>
         <h1 className='text-3xl font-black text-pink-700'>Register</h1>
         {DATA_FORM.map((itm :DataForm,index:any) => (
                 <input key={index}  className='m-2 p-2 rounded-xl' type={itm.type} name={itm.name} placeholder={itm.placeholder}   onChange={HandleChange} />

@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React, { useState } from 'react'
 import logo from '../logo.svg';
 import { Button } from './utils/ComponentsUtils'
