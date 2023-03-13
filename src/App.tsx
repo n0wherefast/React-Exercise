@@ -32,8 +32,8 @@ return (
       <img className='w-32 h-32 justeify-center items-center animate-slow p-3' src={logo}  alt="" />
   </div>
   <div className='p-2 mb-2'>
-     <a className=' p-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/">Home</a>
-    <a className=' p-2 m-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/Projects">Project</a>
+     <a className='transition ease-in-out delay-150  p-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/">Home</a>
+    <a className='transition ease-in-out delay-150  p-2 m-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/Projects">Project</a>
 
   </div>
    

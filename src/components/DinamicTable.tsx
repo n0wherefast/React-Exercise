@@ -79,7 +79,7 @@ export default function DinamicTable() {
 
 
   return (
-<div className=' m-2 rounded flex flex-col items-center p-2 overflow-scroll'>
+<div className=' m-2 rounded flex flex-col items-center p-2 relative overflow-x-auto shadow-md sm:rounded-lg'>
     <h1 className=' text-4xl font-bold text-pink-600 p-2 '>Dinamic Table</h1>
 
     {form()}
