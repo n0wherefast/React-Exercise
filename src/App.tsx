@@ -32,8 +32,9 @@ return (
       <img className='w-32 h-32 justeify-center items-center animate-slow p-3' src={logo}  alt="" />
   </div>
   <div className='p-2 mb-2'>
-    <a className=' p-2 m-2 w-1/2 bg-cyan-500 rounded-xl font-semibold' href="#/Projects">Projects</a>
-     <a className=' p-2 w-1/2 bg-cyan-500 rounded-xl font-semibold' href="#/">Home</a>
+     <a className=' p-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/">Home</a>
+    <a className=' p-2 m-2 w-1/2 bg-cyan-500 rounded-xl font-semibold hover:bg-pink-700' href="#/Projects">Project</a>
+
   </div>
    
   <div className='flex flex-row bg-gradient-to-t from-pink-900 to-cyan-700  justify-center w-1/1 h-1/2 rounded-xl'>

@@ -11,9 +11,8 @@ export default function DogApis() {
     const check = breed?  image :   null 
   
     const obj = breeds
-    
-
-   const HandleChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
+  
+   const HandleChange = (e:React.ChangeEvent<HTMLSelectElement>) =>{
      setBreed(e.target.value)
    } 
     
@@ -24,7 +23,7 @@ return loading ? (
     
     <div className='rounded-xl w-1/1 h-1/2  m-2 bg-slate-800 flex flex-col'>
        <h1 className='flex justify-between items-center  text-5xl font-bold text-pink-600 p-3'>Dog's From API</h1>
-       <select className='w-1/3 m-4' name="" id="" onChange={()=>HandleChange}>
+       <select className='w-1/3 m-4' name="" id="" onChange={ HandleChange}>
             {Object.keys(obj).map((key,index) => {
               return <option key={index} value={key}>{key}</option>;
              })} 
