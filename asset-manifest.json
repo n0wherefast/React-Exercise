@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Exercise/static/css/main.29725dd6.css",
-    "main.js": "/React-Exercise/static/js/main.ad460eac.js",
+    "main.css": "/React-Exercise/static/css/main.5303fb68.css",
+    "main.js": "/React-Exercise/static/js/main.c065d087.js",
     "static/js/787.7eca9f63.chunk.js": "/React-Exercise/static/js/787.7eca9f63.chunk.js",
     "static/media/114.png": "/React-Exercise/static/media/114.368bd28e3d75efebee49.png",
     "static/media/615.png": "/React-Exercise/static/media/615.6e7b6ccfe1e533ca2376.png",
@@ -816,12 +816,12 @@
     "static/media/copy.svg": "/React-Exercise/static/media/copy.aee60e85ef5adf1732b7321bcdfe2776.svg",
     "index.html": "/React-Exercise/index.html",
     "static/media/pokeball.svg": "/React-Exercise/static/media/pokeball.b5a9b0d875367d0c3745c8a57c0b6b7e.svg",
-    "main.29725dd6.css.map": "/React-Exercise/static/css/main.29725dd6.css.map",
-    "main.ad460eac.js.map": "/React-Exercise/static/js/main.ad460eac.js.map",
+    "main.5303fb68.css.map": "/React-Exercise/static/css/main.5303fb68.css.map",
+    "main.c065d087.js.map": "/React-Exercise/static/js/main.c065d087.js.map",
     "787.7eca9f63.chunk.js.map": "/React-Exercise/static/js/787.7eca9f63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29725dd6.css",
-    "static/js/main.ad460eac.js"
+    "static/css/main.5303fb68.css",
+    "static/js/main.c065d087.js"
   ]
 }
