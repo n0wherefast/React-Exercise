@@ -1,3 +1,6 @@
+# Description
+
+This React App defines a set of exercises on different components. The app includes a navigation menu that allows the user to switch between components. The navigation menu is implemented using HTML anchor tags that link to different paths. When the user clicks on a link, the app navigates to the corresponding path and renders the appropriate 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
