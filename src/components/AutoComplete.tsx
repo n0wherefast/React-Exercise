@@ -38,7 +38,7 @@ export default function AutoComplete() {
 
 
   return (
-    <div className='flex  flex-col justify-center p-3 rounded max-w-lg h-1/1 '>
+    <div className='flex flex-col justify-center p-2 rounded w-1/1  '>
         <h1 className=' text-2xl font-bold text-cyan-500 p-2 '>Auto Complete</h1>
          <section className='flex flex-col justify-center   p-2 '>
             <Input className='flex justify-center rounded  border-2 p-2' type="text" value={value} onChange={autoComplete}  placeholder={placeholder} />
