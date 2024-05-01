@@ -9,10 +9,8 @@ function Projects() {
         <div  className='p-2'>
             <h2 className='p-2 font-black text-xl'>Descrizione del progetto</h2>
               <p className='p-2 '>
-                Questa React App definisce un insieme di esercizi su diversi componenti. 
-                L'app include un menu di navigazione che consente all'utente di passare da un componente all'altro.
-                Il menu di navigazione è implementato utilizzando i tag anchor di HTML che linkano a diversi percorsi.
-                Quando l'utente fa clic su un link, l'app naviga al percorso corrispondente e renderizza il componente appropriato.
+                Questa React App definisce un insieme di progetti a scopo didattico su diversi componenti. 
+                L'app include un menu di navigazione che consente di passare da un componente all'altro.
             </p>
             <h2 className='p-2 font-black text-xl'>I componenti inclusi nell'app sono:</h2>
             <ul className='p-2 ml-2 list-disc'>

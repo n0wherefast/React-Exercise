@@ -26,9 +26,9 @@ function App() {
  
 return (
   
-<div className='bg-slate-800 justify-center rounded-xl p-2 m-2 items-center w-11/12 min-h-[900px]'>
+<div className='bg-slate-800 justify-center rounded-xl p-2 m-2 items-center w-full min-h-screen'>
   <div className='flex flex-row  items-center'>
-      <h1 className=' flex justify-center items-center text-6xl font-bold p-2 mb-2  text-sky-300'> React Exercise</h1>
+      <h1 className=' flex justify-center items-center text-6xl font-bold p-2 mb-2  text-sky-300'> React Projects Exercise</h1>
       <img className='w-32 h-32 justeify-center items-center animate-slow p-3' src={logo}  alt="" />
   </div>
   <div className='p-2 mb-2'>
@@ -37,7 +37,7 @@ return (
 
   </div>
    
-  <div className='flex flex-row bg-gradient-to-t from-pink-900 to-cyan-700  justify-center w-1/1 h-1/2 rounded-xl'>
+  <div className='flex flex-row bg-gradient-to-t from-pink-700 to-cyan-700  justify-center w-full min-h-screen rounded-xl'>
         
   
             <Routes>

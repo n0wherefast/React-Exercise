@@ -91,11 +91,11 @@ export default function Todo() {
     }
     
  return (
-    <div className='m-w-1/1 min-h-80 m-2 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
+    <div className='w-full min-h-80 m-2 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
          <h1 className=' text-3xl font-bold text-pink-600 p-2 '>Todo List</h1>
          <div>
          <form className='flex flex-col justify-center p-2 gap-5 '>
-          <Input className='flex justify-center rounded-xl p-2 h-14 w-50 text-lg'  type="text" value={value} onSubmit={onSubmit} onChange={setTodos}  placeholder={'Todos'}  />
+          <Input className='flex justify-center rounded-xl p-2 h-14 w-50 text-lg'  type="text" value={value} onSubmit={onSubmit} onChange={setTodos}  placeholder={'What do we do today?'}  />
             <div className='flex gap-1 '>
               <Button
              className={'border  border-cyan-600  rounded-xl  bg-cyan-600 hover:bg-cyan-800  w-1/2 p-2 m-2 text-xl font-semibold'}
@@ -104,7 +104,7 @@ export default function Todo() {
               children={'Create'}  
               />
               <Button
-             className={'border border-pink-600  rounded-xl  bg-pink-700 hover:bg-pink-800 w-16 p-2 m-2 text-xl font-semibold'}
+             className={'border border-pink-600  rounded-xl  bg-pink-700 hover:bg-pink-800 w-1/2 p-2 m-2 text-xl font-semibold'}
              type={'submit'}
              onClick={clean} 
              children={'Clean'} 
@@ -114,7 +114,7 @@ export default function Todo() {
 
          </form>
             <ul>{unqTodo.map((item ,index)=>(
-                <li className={` ${isChecked(item)} pl-4 w-40 h-14  flex gap-2 font-semibold text-xl bg-cyan-900 m-2 rounded-3xl items-center`}  key={index}  >
+                <li className={` ${isChecked(item)} pl-4 min-w-[15rem] h-14  flex gap-2 font-semibold text-white text-2xl bg-cyan-900 border border-pink-700 m-2 rounded-3xl justify-center items-center`}  key={index}  >
                     {item}
                     <Checkbox className='checked:line-through decoration-red-600  flex items-center justify-center m-2 w-4 h-4'
                         onChange={handleCheck} value={item} checked={isCheck(item)}

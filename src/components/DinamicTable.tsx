@@ -27,19 +27,19 @@ export default function DinamicTable() {
 
         {
           ID: 1,
-          Name: "luca",
-          Surname: "rossi",
-          Email: "luca.rossi@gmmaaaaailit",
+          Name: "luke",
+          Surname: "skywalker",
+          Email: "luke.skywalker@theforce.com",
           Code: 5454554,
-          Address: "via torino",
+          Address: "tatooine",
         },
         {
           ID: 2,
-          Name: "marco",
-          Surname: "verdi",
-          Email: "marco.verdi@gmmaaaaailit",
+          Name: "dart",
+          Surname: "vader",
+          Email: "obiwan.ihateyou@deathstar.com",
           Code: 5465665,
-          Address: "via piacenza",
+          Address: "deathstar",
         },
       ]
      )
