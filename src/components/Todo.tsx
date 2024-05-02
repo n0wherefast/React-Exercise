@@ -91,7 +91,7 @@ export default function Todo() {
     }
     
  return (
-    <div className='w-full min-h-80 m-2 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
+    <div className='w-1/2 min-h-80 m-4 h-1/2 md:border-2 md:border-slate-800 rounded-xl'>
          <h1 className=' text-3xl font-bold text-pink-600 p-2 '>Todo List</h1>
          <div>
          <form className='flex flex-col justify-center p-2 gap-5 '>
