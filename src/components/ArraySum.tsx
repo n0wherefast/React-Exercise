@@ -26,7 +26,7 @@ function ArraySum  () {
   
 
   return (
-    <div className=' m-2 rounded-xl md:border-2 md:border-slate-800  w-60   md:w-90'>
+    <div className=' m-2 rounded-xl md:border-2 md:border-slate-100 '>
       <h1 className='flex justify-center font-bold  text-4xl m-1 text-pink-600'>Array Sum</h1>
         <form className=' flex justify-center flex-col rounded m-4 '>
           <div className='flex flex-col md:flex-row'>
